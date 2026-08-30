@@ -1,0 +1,19 @@
+[project]
+name = "llmanga-translator"
+version = "1.0.0"
+description = "Self-hosted manga translation using vision LLM"
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=1.0.0",
+    "pillow>=10.0.0",
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.29.0",
+    "python-multipart>=0.0.9",
+    "python-dotenv>=1.0.0",
+]
+
+# Dev-only tools (installed by `uv sync`; the `dev` group is included by default).
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
