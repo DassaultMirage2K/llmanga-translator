@@ -302,8 +302,8 @@ class MangaTranslator:
                     response_format=TEXT_REGIONS_RESPONSE_FORMAT,
                 )
                 regions, summary = self.parse_llm_response(content)
-                if not regions and attempt < self.max_retries - 1:
-                    raise ValueError("Empty text_regions from LLM")
+                # if not regions and attempt < self.max_retries - 1:
+                #     raise ValueError("Empty text_regions from LLM")
                 self._last_context_tokens = usage_total
                 return regions, summary, content
 
